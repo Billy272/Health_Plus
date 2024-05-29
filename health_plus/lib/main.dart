@@ -1,4 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:health_plus/log_in.dart';
+import 'log_in.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,9 +30,17 @@ class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 129, 157, 229),
+      backgroundColor: const Color.fromARGB(255, 34, 76, 192),
       body: Center(
-        child: Column(
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const LogInScreen()),
+            );
+          },
+        ),
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment:
               CrossAxisAlignment.center, // Center children horizontally
@@ -36,30 +48,30 @@ class StartPage extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: <Widget>[
-                const Icon(
+                Icon(
                   Icons.favorite,
-                  size: 200,
-                  color: Colors.white,
+                  size: 150,
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
-                // Custom plus sign
-                const Icon(
+                Icon(
                   Icons.add,
                   size: 100,
-                  color: const Colors.fromARGB(255, 129, 157, 229),
+                  color: Color.fromARGB(255, 4, 129, 231),
                 ),
               ],
             ),
-            const SizedBox(height: 16.0),
-            const Text(
+            SizedBox(height: 16.0),
+            Text(
               'Health Plus',
               style: TextStyle(
+                fontWeight: FontWeight.bold,
                 fontSize: 24,
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
               textAlign: TextAlign.center, // Center text within its bounds
             ),
-            const SizedBox(height: 10.0),
-            const Text(
+            SizedBox(height: 10.0),
+            Text(
               '"Where compassion\n and healthcare meet"',
               style: TextStyle(
                 fontSize: 16,
