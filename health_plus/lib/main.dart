@@ -15,27 +15,57 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomepage(title: 'Health Plus'),
+      home: const StartPage(),
     );
   }
 }
 
-class MyHomepage extends StatelessWidget {
-  const MyHomepage({super.key, required String title});
+class StartPage extends StatelessWidget {
+  const StartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Health Plus'),
-      ),
+      backgroundColor: const Color.fromARGB(255, 129, 157, 229),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment:
+              CrossAxisAlignment.center, // Center children horizontally
           children: <Widget>[
-            Text(
+            Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                const Icon(
+                  Icons.favorite,
+                  size: 200,
+                  color: Colors.white,
+                ),
+                // Custom plus sign
+                const Icon(
+                  Icons.add,
+                  size: 100,
+                  color: const Colors.fromARGB(255, 129, 157, 229),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16.0),
+            const Text(
               'Health Plus',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: TextStyle(
+                fontSize: 24,
+                color: Color.fromARGB(255, 255, 255, 255),
+              ),
+              textAlign: TextAlign.center, // Center text within its bounds
+            ),
+            const SizedBox(height: 10.0),
+            const Text(
+              '"Where compassion\n and healthcare meet"',
+              style: TextStyle(
+                fontSize: 16,
+                color: Color.fromARGB(255, 255, 255, 255),
+              ),
+              textAlign: TextAlign.center, // Center text within its bounds
             ),
           ],
         ),
