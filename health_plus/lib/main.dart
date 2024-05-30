@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:health_plus/log_in.dart';
-import 'log_in.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +17,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const StartPage(),
+      routes: {
+        '/login': (context) => const LogInScreen(),
+      },
     );
   }
 }
@@ -32,20 +32,12 @@ class StartPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 34, 76, 192),
       body: Center(
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const LogInScreen()),
-            );
-          },
-        ),
-        child: const Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment:
               CrossAxisAlignment.center, // Center children horizontally
           children: <Widget>[
-            Stack(
+            const Stack(
               alignment: Alignment.center,
               children: <Widget>[
                 Icon(
@@ -60,8 +52,8 @@ class StartPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 16.0),
-            Text(
+            const SizedBox(height: 16.0),
+            const Text(
               'Health Plus',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -70,14 +62,33 @@ class StartPage extends StatelessWidget {
               ),
               textAlign: TextAlign.center, // Center text within its bounds
             ),
-            SizedBox(height: 10.0),
-            Text(
+            const SizedBox(height: 10.0),
+            const Text(
               '"Where compassion\n and healthcare meet"',
               style: TextStyle(
                 fontSize: 16,
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
               textAlign: TextAlign.center, // Center text within its bounds
+            ),
+            const SizedBox(height: 20.0),
+            InkWell(
+              onTap: () => Navigator.pushNamed(context, '/login'),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 12.0, horizontal: 24.0),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: const Text(
+                  'Get Started',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
