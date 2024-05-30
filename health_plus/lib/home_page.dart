@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:health_plus/homeTabs/location.dart';
 import 'package:health_plus/homeTabs/doctors.dart';
 import 'package:health_plus/homeTabs/appointment.dart';
+import 'package:health_plus/homeTabs/waiting.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({super.key});
@@ -50,6 +51,18 @@ class HomePageScreen extends StatelessWidget {
                       builder: (context) => const AppointmentScreen()));
             },
           )),
+          const SizedBox(height: 5.0),
+          Card(
+            child: ListTile(
+                title: const Text("ER waiting period"),
+                leading: const Icon(Icons.calendar_month),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const WaitingScreen()));
+                }),
+          ),
         ],
       ),
     );
