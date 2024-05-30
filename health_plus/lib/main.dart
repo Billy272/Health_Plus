@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_plus/log_in.dart';
+import 'package:health_plus/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +13,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Health Plus',
+      title: 'Patient Plus',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: const StartPage(),
       routes: {
         '/login': (context) => const LogInScreen(),
+        '/home': (context) => const HomePageScreen(),
       },
     );
   }
@@ -34,8 +36,7 @@ class StartPage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment:
-              CrossAxisAlignment.center, // Center children horizontally
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const Stack(
               alignment: Alignment.center,
@@ -54,7 +55,7 @@ class StartPage extends StatelessWidget {
             ),
             const SizedBox(height: 16.0),
             const Text(
-              'Health Plus',
+              'Patient Plus',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
