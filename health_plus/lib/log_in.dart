@@ -17,7 +17,7 @@ class LogInScreen extends StatelessWidget {
         // Faded color overlay
         Positioned.fill(
           child: Container(
-            color: const Color.fromARGB(255, 87, 117, 186).withOpacity(0.5),
+            color: const Color.fromARGB(255, 87, 117, 186).withOpacity(0.7),
           ),
         ),
         Scaffold(
@@ -61,7 +61,7 @@ class LogInScreen extends StatelessWidget {
                       Navigator.pushNamed(context, '/home');
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
+                      backgroundColor: const Color.fromARGB(255, 234, 55, 55),
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
