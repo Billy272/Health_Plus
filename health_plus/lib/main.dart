@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:health_plus/log_in.dart';
 import 'package:health_plus/home_page.dart';
+import 'package:health_plus/status.dart';
+import 'package:health_plus/chat.dart';
+import 'package:health_plus/medication.dart';
+import 'package:health_plus/dispose.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +24,7 @@ class MyApp extends StatelessWidget {
       home: const StartPage(),
       routes: {
         '/login': (context) => const LogInScreen(),
-        '/home': (context) => const HomePageScreen(),
+        '/home': (context) => const MyPageNav(),
       },
     );
   }
@@ -93,6 +97,49 @@ class StartPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class MyPageNav extends StatefulWidget {
+  const MyPageNav({super.key});
+
+  @override
+  State<MyPageNav> createState() => _MyPageNavState();
+}
+
+class _MyPageNavState extends State<MyPageNav> {
+  int _currentIndex = 0;
+
+  final List<Widget> _children = const [
+    HomePageScreen(),
+    ChatScreen(),
+    StatusScreen(),
+    MedicationScreen(),
+    DisposeScreen()
+  ];
+
+  void onTabTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 23, 79, 221),
+      body: _children[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: onTabTapped,
+        currentIndex: _currentIndex,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+        ],
       ),
     );
   }
