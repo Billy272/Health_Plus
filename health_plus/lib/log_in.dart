@@ -25,6 +25,15 @@ class LogInScreen extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
+            actions: const [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text('Log In'),
+                  SizedBox(width: 48.0),
+                ],
+              ),
+            ],
           ),
           body: Center(
             child: Padding(
@@ -33,6 +42,22 @@ class LogInScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
+                  const Stack(
+                    alignment: Alignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.favorite,
+                        size: 150,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                      ),
+                      Icon(
+                        Icons.add,
+                        size: 100,
+                        color: Color.fromARGB(255, 4, 129, 231),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 50.0),
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
@@ -72,6 +97,8 @@ class LogInScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 18),
                     ),
                   ),
+                  const SizedBox(height: 10),
+                  const Text('forgot password?'),
                 ],
               ),
             ),
