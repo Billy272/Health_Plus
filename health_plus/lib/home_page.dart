@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:health_plus/homeTabs/location.dart';
 import 'package:health_plus/homeTabs/doctors.dart';
 import 'package:health_plus/homeTabs/appointment.dart';
@@ -63,6 +64,18 @@ class HomePageScreen extends StatelessWidget {
                           builder: (context) => const WaitingScreen()));
                 }),
           ),
+          const SizedBox(height: 5.0),
+          Card(
+              child: ListTile(
+            title: const Text("Find an urgent care location"),
+            leading: const FaIcon(FontAwesomeIcons.hospital),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const LocationScreen()));
+            },
+          ))
         ],
       ),
     );
