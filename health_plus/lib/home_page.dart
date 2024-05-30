@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_plus/homeTabs/location.dart';
 import 'package:health_plus/homeTabs/doctors.dart';
+import 'package:health_plus/homeTabs/appointment.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({super.key});
@@ -43,10 +44,10 @@ class HomePageScreen extends StatelessWidget {
             title: const Text("Make an appointment"),
             leading: const Icon(Icons.add_task),
             onTap: () {
-              // Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (context) => const DoctorsScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppointmentScreen()));
             },
           )),
         ],
