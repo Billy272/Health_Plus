@@ -146,7 +146,7 @@ class _MyPageNavState extends State<MyPageNav> {
             backgroundColor: Color.fromARGB(255, 57, 89, 158),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.monitor_heart),
+            icon: Icon(Icons.monitor_heart_rounded),
             label: 'Status',
             backgroundColor: Color.fromARGB(255, 57, 89, 158),
           ),
