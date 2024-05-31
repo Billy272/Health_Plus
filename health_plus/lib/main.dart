@@ -141,7 +141,7 @@ class _MyPageNavState extends State<MyPageNav> {
             backgroundColor: Color.fromARGB(255, 0, 64, 255),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
+            icon: Icon(Icons.chat_rounded),
             label: 'Chat',
             backgroundColor: Color.fromARGB(255, 0, 64, 255),
           ),
