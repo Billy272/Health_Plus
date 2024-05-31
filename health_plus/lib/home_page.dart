@@ -28,8 +28,12 @@ class HomePageScreen extends StatelessWidget {
           Card(
             color: const Color.fromARGB(255, 129, 157, 229),
             child: ListTile(
-              title: const Text('Find a Location'),
-              leading: const Icon(Icons.map),
+              title: const Text(
+                'Find a Location',
+                style: TextStyle(color: Colors.white, fontSize: 16.0),
+              ),
+              leading: const FaIcon(FontAwesomeIcons.mapLocation,
+                  color: Colors.white),
               onTap: () {
                 Navigator.push(
                     context,
@@ -42,8 +46,12 @@ class HomePageScreen extends StatelessWidget {
           Card(
               color: const Color.fromARGB(255, 87, 117, 186),
               child: ListTile(
-                title: const Text('Choose a doctor'),
-                leading: const Icon(Icons.person),
+                title: const Text(
+                  'Choose a doctor',
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+                leading: const FaIcon(FontAwesomeIcons.userNurse,
+                    color: Colors.white),
                 onTap: () {
                   Navigator.push(
                       context,
@@ -55,8 +63,11 @@ class HomePageScreen extends StatelessWidget {
           Card(
               color: const Color.fromARGB(255, 87, 117, 186),
               child: ListTile(
-                title: const Text("Make an appointment"),
-                leading: const Icon(Icons.add_task),
+                title: const Text(
+                  "Make an appointment",
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+                leading: const Icon(Icons.add_task, color: Colors.white),
                 onTap: () {
                   Navigator.push(
                       context,
@@ -68,8 +79,11 @@ class HomePageScreen extends StatelessWidget {
           Card(
             color: const Color.fromARGB(255, 57, 86, 158),
             child: ListTile(
-                title: const Text("ER waiting period"),
-                leading: const Icon(Icons.calendar_month),
+                title: const Text(
+                  "ER waiting period",
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+                leading: const Icon(Icons.calendar_month, color: Colors.white),
                 onTap: () {
                   Navigator.push(
                       context,
@@ -81,8 +95,12 @@ class HomePageScreen extends StatelessWidget {
           Card(
               color: const Color.fromARGB(255, 225, 57, 96),
               child: ListTile(
-                title: const Text("Find an urgent care location"),
-                leading: const FaIcon(FontAwesomeIcons.hospital),
+                title: const Text(
+                  "Find an urgent care location",
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+                leading: const FaIcon(FontAwesomeIcons.hospital,
+                    color: Colors.white),
                 onTap: () {
                   Navigator.push(
                       context,
