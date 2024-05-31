@@ -129,7 +129,7 @@ class _MyPageNavState extends State<MyPageNav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(0, 221, 23, 23),
+      backgroundColor: const Color.fromARGB(255, 221, 23, 23),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
@@ -138,27 +138,27 @@ class _MyPageNavState extends State<MyPageNav> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Color.fromARGB(255, 0, 64, 255),
+            backgroundColor: Color.fromARGB(255, 57, 89, 158),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat_rounded),
             label: 'Chat',
-            backgroundColor: Color.fromARGB(255, 0, 64, 255),
+            backgroundColor: Color.fromARGB(255, 57, 89, 158),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.monitor_heart),
             label: 'Status',
-            backgroundColor: Color.fromARGB(255, 0, 64, 255),
+            backgroundColor: Color.fromARGB(255, 57, 89, 158),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.medical_services),
             label: 'Medication',
-            backgroundColor: Color.fromARGB(255, 0, 64, 255),
+            backgroundColor: Color.fromARGB(255, 57, 89, 158),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.delete_sharp),
             label: 'Dispose',
-            backgroundColor: Color.fromARGB(255, 0, 64, 255),
+            backgroundColor: Color.fromARGB(255, 57, 89, 158),
           ),
         ],
       ),

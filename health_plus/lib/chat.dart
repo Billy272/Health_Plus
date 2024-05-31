@@ -34,14 +34,17 @@ class ChatScreen extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           Card(
+              color: const Color.fromARGB(255, 129, 157, 229),
               child: ListTile(
-            title: const Text('Chat with a nurse'),
-            leading: const Icon(Icons.chat_rounded),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ChatScreen()));
-            },
-          )),
+                title: const Text('Chat with a nurse'),
+                leading: const Icon(Icons.chat_rounded),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChatScreen()));
+                },
+              )),
           const SizedBox(height: 5.0),
           Card(
               child: ListTile(
