@@ -20,9 +20,9 @@ class ChatScreen extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Card(
+            color: const Color.fromARGB(255, 129, 157, 229),
             child: ListTile(
               title: const Text('Chat with a doctor'),
-              minTileHeight: BorderSide.strokeAlignCenter,
               leading: const Icon(Icons.chat_rounded),
               onTap: () {
                 Navigator.push(
