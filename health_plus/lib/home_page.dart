@@ -42,7 +42,8 @@ class HomePageScreen extends StatelessWidget {
                 child: ListTile(
                   title: const Text(
                     'Find a Location',
-                    style: TextStyle(color: Colors.white, fontSize: 16.0),
+                    style: TextStyle(
+                        color: Colors.white, fontSize: 16.0, height: 3),
                   ),
                   leading: const FaIcon(FontAwesomeIcons.mapLocation,
                       color: Colors.white),
@@ -63,7 +64,8 @@ class HomePageScreen extends StatelessWidget {
                   child: ListTile(
                     title: const Text(
                       'Choose a doctor',
-                      style: TextStyle(color: Colors.white, fontSize: 16.0),
+                      style: TextStyle(
+                          color: Colors.white, fontSize: 16.0, height: 3),
                     ),
                     leading: const FaIcon(FontAwesomeIcons.userNurse,
                         color: Colors.white),
@@ -83,7 +85,8 @@ class HomePageScreen extends StatelessWidget {
                   child: ListTile(
                     title: const Text(
                       "Make an appointment",
-                      style: TextStyle(color: Colors.white, fontSize: 16.0),
+                      style: TextStyle(
+                          color: Colors.white, fontSize: 16.0, height: 3),
                     ),
                     leading: const Icon(Icons.add_task, color: Colors.white),
                     onTap: () {
@@ -102,7 +105,8 @@ class HomePageScreen extends StatelessWidget {
                 child: ListTile(
                     title: const Text(
                       "ER waiting period",
-                      style: TextStyle(color: Colors.white, fontSize: 16.0),
+                      style: TextStyle(
+                          color: Colors.white, fontSize: 16.0, height: 3),
                     ),
                     leading:
                         const Icon(Icons.calendar_month, color: Colors.white),
@@ -122,7 +126,8 @@ class HomePageScreen extends StatelessWidget {
                   child: ListTile(
                     title: const Text(
                       "Find an urgent care location",
-                      style: TextStyle(color: Colors.white, fontSize: 16.0),
+                      style: TextStyle(
+                          color: Colors.white, fontSize: 16.0, height: 3),
                     ),
                     leading: const FaIcon(FontAwesomeIcons.hospital,
                         color: Colors.white),
