@@ -23,12 +23,19 @@ class HomePageScreen extends StatelessWidget {
             Scaffold.of(context).openDrawer();
           },
         ),
-        title: const Text(
-          'Home',
-          style: TextStyle(
-            color: Color.fromARGB(255, 255, 255, 255),
-            fontSize: 20,
-          ),
+        title: const Row(
+          children: <Widget>[
+            Spacer(flex: 2),
+            Text(
+              'Home',
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Spacer(flex: 3),
+          ],
         ),
       ),
       body: Center(
