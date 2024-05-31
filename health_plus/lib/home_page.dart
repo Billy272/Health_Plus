@@ -36,7 +36,7 @@ class HomePageScreen extends StatelessWidget {
           children: <Widget>[
             const SizedBox(height: 5),
             SizedBox(
-              height: 20,
+              height: 70,
               child: Card(
                 color: const Color.fromARGB(255, 129, 157, 229),
                 child: ListTile(
@@ -57,7 +57,7 @@ class HomePageScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10.0),
             SizedBox(
-              height: 20,
+              height: 70,
               child: Card(
                   color: const Color.fromARGB(255, 87, 117, 186),
                   child: ListTile(
@@ -77,7 +77,7 @@ class HomePageScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10.0),
             SizedBox(
-              height: 20,
+              height: 70,
               child: Card(
                   color: const Color.fromARGB(255, 87, 117, 186),
                   child: ListTile(
@@ -96,7 +96,7 @@ class HomePageScreen extends StatelessWidget {
             ),
             const SizedBox(height: 5.0),
             SizedBox(
-              height: 20,
+              height: 70,
               child: Card(
                 color: const Color.fromARGB(255, 57, 86, 158),
                 child: ListTile(
@@ -116,7 +116,7 @@ class HomePageScreen extends StatelessWidget {
             ),
             const SizedBox(height: 5.0),
             SizedBox(
-              height: 20,
+              height: 70,
               child: Card(
                   color: const Color.fromARGB(255, 225, 57, 96),
                   child: ListTile(
