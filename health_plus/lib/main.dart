@@ -36,7 +36,7 @@ class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 34, 76, 192),
+      backgroundColor: const Color.fromARGB(255, 57, 89, 158),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
