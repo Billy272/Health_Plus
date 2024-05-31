@@ -27,6 +27,7 @@ class HomePageScreen extends StatelessWidget {
           Card(
             child: ListTile(
               title: const Text('Find a Location'),
+              minTileHeight: BorderSide.strokeAlignCenter,
               leading: const Icon(Icons.map),
               onTap: () {
                 Navigator.push(
