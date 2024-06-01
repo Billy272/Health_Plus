@@ -11,12 +11,11 @@ class ChatPage extends StatefulWidget {
     ChatMessage(messageContent: "Hello, Will", messageType: "receiver"),
     ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
     ChatMessage(
-        messageContent: "Hey Doctor, I am doing fine dude. wbu?",
+        messageContent: "Hey Doctor, I am doing fine now. Thanks.",
         messageType: "sender"),
-    ChatMessage(messageContent: "ehhhh, doing OK.", messageType: "receiver"),
     ChatMessage(
         messageContent: "Nice to hear, you're doing good.",
-        messageType: "sender"),
+        messageType: "receiver"),
   ];
   ChatPage({super.key});
 
@@ -51,7 +50,7 @@ class _ChatPageState extends State<ChatPage> {
                 ),
                 const CircleAvatar(
                   backgroundImage: NetworkImage(
-                      "<https://randomuser.me/api/portraits/men/5.jpg>"),
+                      "https://img.etimg.com/thumb/msid-69585275,width-300,height-225,imgsize-252606,resizemode-75/doctor-indi.jpg"),
                   maxRadius: 20,
                 ),
                 const SizedBox(
@@ -63,7 +62,7 @@ class _ChatPageState extends State<ChatPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       const Text(
-                        "Kriss Benwat",
+                        "Dr.James Russel",
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w600),
                       ),
