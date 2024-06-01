@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:health_plus/log_in.dart';
 import 'package:health_plus/home_page.dart';
 import 'package:health_plus/status.dart';
@@ -172,6 +173,20 @@ class NavigationDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Drawer();
+    return Drawer(
+      child: SingleChildScrollView(
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+            buildHeader(context),
+            buildMenuItems(context),
+          ])),
+    );
+    Widget buildHeader(BuildContext context) => Container(
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).padding.top,
+          ),
+        );
+    Widget buildMenuItems(BuildContext context) => Container();
   }
 }
