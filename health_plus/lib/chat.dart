@@ -30,7 +30,7 @@ class _ChatScreenState extends State<ChatScreen> {
             "https://img.etimg.com/thumb/msid-69585275,width-300,height-225,imgsize-252606,resizemode-75/doctor-indi.jpg",
         time: "Now"),
     ChatUsers(
-        name: "Nurse Gladys",
+        name: "Nurse Vish",
         messageText: "Please take your medications, as per the prescription",
         imageUrl:
             "https://unsplash.com/photos/girl-in-blue-jacket-holding-red-and-silver-ring-Y-3Dt0us7e0",
