@@ -6,13 +6,15 @@ class ConversationList extends StatefulWidget {
   final String imageUrl;
   final String time;
   final bool isMessageRead;
-  ConversationList(
-      {required this.name,
+  const ConversationList(
+      {super.key,
+      required this.name,
       required this.messageText,
       required this.imageUrl,
       required this.time,
       required this.isMessageRead});
   @override
+  // ignore: library_private_types_in_public_api
   _ConversationListState createState() => _ConversationListState();
 }
 
