@@ -7,23 +7,45 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 64, 255),
+        backgroundColor: const Color.fromARGB(255, 57, 89, 158),
         leading: IconButton(
           tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-          icon: const Icon(Icons.menu),
+          icon: const Icon(Icons.menu, color: Colors.white, size: 30),
           onPressed: () {
             Scaffold.of(context).openDrawer();
           },
         ),
-        title: const Text('Chat'),
+        title: const Row(
+          children: <Widget>[
+            Spacer(flex: 2),
+            Text(
+              'Chat',
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Spacer(flex: 3),
+          ],
+        ),
       ),
       body: Column(
         children: <Widget>[
           Card(
             color: const Color.fromARGB(255, 129, 157, 229),
             child: ListTile(
-              title: const Text('Chat with a doctor'),
-              leading: const Icon(Icons.chat_rounded),
+              title: const Text(
+                'Chat with a doctor',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              leading: const Icon(
+                Icons.chat_rounded,
+                color: Colors.white,
+              ),
               onTap: () {
                 Navigator.push(
                     context,
@@ -36,8 +58,12 @@ class ChatScreen extends StatelessWidget {
           Card(
               color: const Color.fromARGB(255, 129, 157, 229),
               child: ListTile(
-                title: const Text('Chat with a nurse'),
-                leading: const Icon(Icons.chat_rounded),
+                title: const Text('Chat with a nurse',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    )),
+                leading: const Icon(Icons.chat_rounded, color: Colors.white),
                 onTap: () {
                   Navigator.push(
                       context,
@@ -47,24 +73,40 @@ class ChatScreen extends StatelessWidget {
               )),
           const SizedBox(height: 5.0),
           Card(
+              color: const Color.fromARGB(255, 129, 157, 229),
               child: ListTile(
-            title: const Text('Chat with a pharmacist'),
-            leading: const Icon(Icons.chat_rounded),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ChatScreen()));
-            },
-          )),
+                title: const Text(
+                  'Chat with a pharmacist',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.white,
+                  ),
+                ),
+                leading: const Icon(Icons.chat_rounded, color: Colors.white),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChatScreen()));
+                },
+              )),
           const SizedBox(height: 5.0),
           Card(
+              color: const Color.fromARGB(255, 129, 157, 229),
               child: ListTile(
-            title: const Text('Chat with a therapist'),
-            leading: const Icon(Icons.chat_rounded),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ChatScreen()));
-            },
-          )),
+                title: const Text('Chat with a therapist',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    )),
+                leading: const Icon(Icons.chat_rounded, color: Colors.white),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChatScreen()));
+                },
+              )),
         ],
       ),
     );
