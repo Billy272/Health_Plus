@@ -8,7 +8,7 @@ class ChatMessage {
 
 class ChatPage extends StatefulWidget {
   final List<ChatMessage> messages = [
-    ChatMessage(messageContent: "Hello, Will", messageType: "receiver"),
+    ChatMessage(messageContent: "Hello Billy", messageType: "receiver"),
     ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
     ChatMessage(
         messageContent: "Hey Doctor, I am doing fine now. Thanks.",
