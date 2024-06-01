@@ -30,7 +30,45 @@ class ChatScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: const Column(),
+      body: Column(
+        //building chat bubbles
+        children: <Widget>[
+          Expanded(
+            child: ListView(
+              children: <Widget>[
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 129, 157, 229),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Text(
+                    'Hello, how can I help you?',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 129, 157, 229),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Type a message',
+                      hintStyle: TextStyle(color: Colors.white),
+                      border: InputBorder.none,
+                    ),
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
