@@ -130,6 +130,7 @@ class _MyPageNavState extends State<MyPageNav> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 221, 23, 23),
+      drawer: const NavigationDrawer(),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
@@ -163,5 +164,14 @@ class _MyPageNavState extends State<MyPageNav> {
         ],
       ),
     );
+  }
+}
+
+class NavigationDrawer extends StatelessWidget {
+  const NavigationDrawer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Drawer();
   }
 }
