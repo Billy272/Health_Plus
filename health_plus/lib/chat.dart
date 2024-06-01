@@ -1,8 +1,25 @@
 import 'package:flutter/material.dart';
 
-class ChatScreen extends StatelessWidget {
+class ChatUsers {
+  String name;
+  String messageText;
+  String imageURL;
+  String time;
+  ChatUsers(
+      {required this.name,
+      required this.messageText,
+      required this.imageURL,
+      required this.time});
+}
+
+class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
 
+  @override
+  State<ChatScreen> createState() => _ChatScreenState();
+}
+
+class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,45 +46,6 @@ class ChatScreen extends StatelessWidget {
             Spacer(flex: 3),
           ],
         ),
-      ),
-      body: Column(
-        //building chat bubbles
-        children: <Widget>[
-          Expanded(
-            child: ListView(
-              children: <Widget>[
-                Container(
-                  margin: const EdgeInsets.all(10),
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 129, 157, 229),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Text(
-                    'Hello, how can I help you?',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(10),
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 129, 157, 229),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Type a message',
-                      hintStyle: TextStyle(color: Colors.white),
-                      border: InputBorder.none,
-                    ),
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
       ),
     );
   }
