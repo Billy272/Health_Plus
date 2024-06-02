@@ -30,6 +30,31 @@ class _LogInScreenState extends State<LogInScreen> {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
+            actions: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpScreen(),
+                    ) as String,
+                  );
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 16.0), // Adjust padding as needed
+                  child: const Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 48.0),
+            ],
           ),
           body: Center(
             child: Padding(
