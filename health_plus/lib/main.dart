@@ -145,7 +145,7 @@ class _MyPageNavState extends State<MyPageNav> {
                 Icon(Icons.account_circle, color: Colors.white, size: 80.0),
                 SizedBox(height: 10),
                 Text(
-                  'John Doe',
+                  'Bill Bitok',
                   style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 20,
