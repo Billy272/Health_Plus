@@ -177,15 +177,6 @@ class SignUpScreen extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
-            actions: const [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text('Sign Up'),
-                  SizedBox(width: 48.0),
-                ],
-              ),
-            ],
           ),
           body: Center(
             child: Padding(
@@ -225,7 +216,29 @@ class SignUpScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.8),
-                      labelText: 'Username',
+                      labelText: 'Full Name',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16.0),
+                  TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.8),
+                      labelText: 'Email',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16.0),
+                  TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.8),
+                      labelText: 'Patient ID',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
