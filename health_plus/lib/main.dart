@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:health_plus/log_in.dart';
 import 'package:health_plus/home_page.dart';
+import 'package:health_plus/sideTabs/insurance.dart';
 import 'package:health_plus/status.dart';
 import 'package:health_plus/chat.dart';
 import 'package:health_plus/medication.dart';
 import 'package:health_plus/dispose.dart';
+import 'package:health_plus/sideTabs/profile.dart';
+import 'package:health_plus/sideTabs/settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -131,7 +133,92 @@ class _MyPageNavState extends State<MyPageNav> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 221, 23, 23),
-      drawer: const NavigationDrawer(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 57, 89, 158),
+              ),
+              child: Column(children: <Widget>[
+                Icon(Icons.account_circle, color: Colors.white, size: 80.0),
+                SizedBox(height: 10),
+                Text(
+                  'John Doe',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ]),
+            ),
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text('Profile'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProfileScreen()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Settings'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SettingsScreen()));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.file_copy),
+              title: const Text('Insurances'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const InsuranceScreen()));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.info),
+              title: const Text('About'),
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: const Text('About Patient Plus'),
+                      content: const Text(
+                          'Patient Plus is a mobile application that allows patients to manage their health and communicate with healthcare providers.'),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text('Close'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: const Text('Log Out'),
+              onTap: () {
+                Navigator.pushNamed(context, '/login');
+              },
+            ),
+          ],
+        ),
+      ),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
@@ -165,28 +252,5 @@ class _MyPageNavState extends State<MyPageNav> {
         ],
       ),
     );
-  }
-}
-
-class NavigationDrawer extends StatelessWidget {
-  const NavigationDrawer({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      child: SingleChildScrollView(
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-            buildHeader(context),
-            buildMenuItems(context),
-          ])),
-    );
-    Widget buildHeader(BuildContext context) => Container(
-          padding: EdgeInsets.only(
-            top: MediaQuery.of(context).padding.top,
-          ),
-        );
-    Widget buildMenuItems(BuildContext context) => Container();
   }
 }
