@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});
@@ -31,13 +32,12 @@ class _LogInScreenState extends State<LogInScreen> {
             backgroundColor: Colors.transparent,
             elevation: 0,
             actions: [
-              GestureDetector(
+              InkWell(
                 onTap: () {
-                  Navigator.pushNamed(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SignUpScreen(),
-                    ) as String,
+                        builder: (context) => const SignUpScreen()),
                   );
                 },
                 child: Container(
@@ -53,7 +53,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   ),
                 ),
               ),
-              const SizedBox(width: 48.0),
+              const SizedBox(width: 20.0),
             ],
           ),
           body: Center(
