@@ -210,7 +210,7 @@ class SignUpScreen extends StatelessWidget {
                     textAlign:
                         TextAlign.center, // Center text within its bounds
                   ),
-                  const SizedBox(height: 50.0),
+                  const SizedBox(height: 40.0),
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
@@ -221,7 +221,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16.0),
+                  const SizedBox(height: 10.0),
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
@@ -232,7 +232,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16.0),
+                  const SizedBox(height: 10.0),
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
@@ -243,7 +243,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16.0),
+                  const SizedBox(height: 10.0),
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
@@ -255,7 +255,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     obscureText: true,
                   ),
-                  const SizedBox(height: 16.0),
+                  const SizedBox(height: 10.0),
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
