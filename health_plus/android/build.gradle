@@ -23,10 +23,6 @@ buildscript {
     }
 }
 
-plugins {
-    // ...
-    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
-}
 
 secrets {
     // Optionally specify a different file name containing your secrets.
